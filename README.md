@@ -17,4 +17,14 @@ O resultado final mostra que a rede neural é capaz de aprender e prever com boa
 
 ---
 
-Além disso, este repositório também inclui a implementação de uma rede neural para o cálculo da função seno utilizando **scikit-learn**, feita pelo professor durante a aula de Física Computacional. Essa versão serviu como base para compreender os métodos e reproduzi-los em PyTorch.
+Também foi incluido a implementação de uma rede neural para o cálculo da função seno utilizando **scikit-learn**, feita pelo professor durante a aula de Física Computacional. Essa versão serviu como base para compreender os métodos e reproduzi-los em PyTorch.
+
+---
+
+Por fim, este projeto implementa um modelo de rede neural treinado para **aprender a operação de derivação de funções**, utilizando o `MLPRegressor` do `scikit-learn`. O modelo é treinado com **dados sintéticos gerados a partir de polinômios e suas derivadas analíticas**, permitindo que ele aprenda a estimar a derivada de uma função com base apenas na sua forma discreta (amostrada).
+
+O conjunto de dados é construído a partir de **funções polinomiais aleatórias normalizadas**, com ruído adicionado, e suas respectivas derivadas. A rede recebe como entrada a amostra da função \( f(x) \) e aprende a prever \( f'(x) \), funcionando como um **"estimador de derivadas"**.
+
+A arquitetura da rede consiste em um **MLP com 10 camadas ocultas**, cada uma contendo **10 neurônios** e função de ativação `tanh`. O treinamento é realizado com o otimizador **Adam**, e o modelo é ajustado até convergir, com detecção de estagnação no aprendizado (*early stopping*).
+
+Após o treinamento, o modelo é testado com **funções que não foram vistas durante o treino**, como seno, cosseno e um polinômio simples. Os resultados são apresentados graficamente, **comparando a derivada verdadeira com a estimativa feita pela rede**.
