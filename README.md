@@ -28,3 +28,5 @@ O conjunto de dados é construído a partir de **funções polinomiais aleatóri
 A arquitetura da rede consiste em um **MLP com 10 camadas ocultas**, cada uma contendo **10 neurônios** e função de ativação `tanh`. O treinamento é realizado com o otimizador **Adam**, e o modelo é ajustado até convergir, com detecção de estagnação no aprendizado (*early stopping*).
 
 Após o treinamento, o modelo é testado com **funções que não foram vistas durante o treino**, como seno, cosseno e um polinômio simples. Os resultados são apresentados graficamente, **comparando a derivada verdadeira com a estimativa feita pela rede**.
+
+![Resultado](derivadas_sklearn.png)
